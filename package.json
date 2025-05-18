@@ -30,7 +30,8 @@
     "test": "mocha ./test/index.test.js && npm run test:exports",
     "test:exports": "node ./test/_import.mjs && node ./test/_require.cjs",
     "lint": "eslint src/*.js lazy-example.js",
-    "prepublishOnly": "npm run clean && npm run build && npm run lint && npm run test"
+    "prepublishOnly": "npm run clean && npm run build && npm run lint && npm run test",
+    "preinstall": "npx only-allow bun"
   },
   "files": [
     "src/index.js",
